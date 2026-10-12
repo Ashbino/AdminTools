@@ -1,0 +1,118 @@
+name: AdminTools
+version: 1.1.0
+main: com.admintools.AdminTools
+api-version: '1.21'
+description: Custom admin tools - gamemodes, vanish, freeze and more
+
+commands:
+  gmc:
+    description: Set creative mode
+    usage: /gmc [player]
+    permission: admintools.gamemode
+  gms:
+    description: Set survival mode
+    usage: /gms [player]
+    permission: admintools.gamemode
+  gma:
+    description: Set adventure mode
+    usage: /gma [player]
+    permission: admintools.gamemode
+  gmsp:
+    description: Set spectator mode
+    usage: /gmsp [player]
+    permission: admintools.gamemode
+  vanish:
+    description: Toggle vanish
+    usage: /vanish
+    aliases: [v]
+    permission: admintools.vanish
+  freeze:
+    description: Toggle freeze on a player
+    usage: /freeze <player>
+    permission: admintools.freeze
+  fly:
+    description: Toggle flight
+    usage: /fly [player]
+    permission: admintools.fly
+  speed:
+    description: Set fly/walk speed (0-10)
+    usage: /speed <0-10> [player]
+    permission: admintools.speed
+  heal:
+    description: Restore health, hunger and extinguish fire
+    usage: /heal [player]
+    permission: admintools.heal
+  feed:
+    description: Restore hunger
+    usage: /feed [player]
+    permission: admintools.feed
+  god:
+    description: Toggle god mode
+    usage: /god [player]
+    permission: admintools.god
+  invsee:
+    description: Open another player's inventory
+    usage: /invsee <player>
+    permission: admintools.invsee
+  tphere:
+    description: Teleport a player to you
+    usage: /tphere <player>
+    permission: admintools.tphere
+  sc:
+    description: Staff chat
+    usage: /sc <message>
+    aliases: [staffchat]
+    permission: admintools.staffchat
+  admintools:
+    description: AdminTools management
+    usage: /admintools reload
+    aliases: [at]
+    permission: admintools.reload
+
+permissions:
+  admintools.gamemode:
+    default: op
+  admintools.gamemode.others:
+    default: op
+  admintools.vanish:
+    default: op
+  admintools.vanish.see:
+    description: Can see vanished players
+    default: op
+  admintools.freeze:
+    default: op
+  admintools.freeze.bypass:
+    description: Cannot be frozen
+    default: op
+  admintools.fly:
+    default: op
+  admintools.fly.others:
+    default: op
+  admintools.speed:
+    default: op
+  admintools.speed.others:
+    default: op
+  admintools.heal:
+    default: op
+  admintools.heal.others:
+    default: op
+  admintools.feed:
+    default: op
+  admintools.feed.others:
+    default: op
+  admintools.god:
+    default: op
+  admintools.god.others:
+    default: op
+  admintools.invsee:
+    default: op
+  admintools.invsee.modify:
+    description: Can edit the inventory opened with /invsee
+    default: op
+  admintools.tphere:
+    default: op
+  admintools.staffchat:
+    description: Can send and read staff chat
+    default: op
+  admintools.reload:
+    default: op

@@ -1,0 +1,90 @@
+# ============================================================
+#  AdminTools config  -  use /admintools reload after editing
+#  Colors use & codes, e.g. &a = green, &c = red
+# ============================================================
+
+vanish:
+  # Give the invisibility potion (no particles, no HUD icon)
+  potion-invisibility: true
+  # Mobs won't target vanished players
+  disable-mob-targeting: true
+  # Vanished players can't pick up items
+  disable-item-pickup: true
+  # Vanished players don't push/collide with others
+  disable-collision: true
+  # Suppress the real join/quit message for vanished players
+  silent-join-quit: true
+  # Keep vanish on after relog / restart
+  persist-on-rejoin: true
+  # Send a fake leave/join message when you vanish/unvanish
+  fake-messages: false
+  fake-leave-message: "&e%player% left the game"
+  fake-join-message: "&e%player% joined the game"
+  # Small reminder above the hotbar while vanished
+  actionbar-reminder: true
+  actionbar-message: "&aYou are vanished"
+
+freeze:
+  block-movement: true
+  block-break: true
+  block-place: true
+  block-interact: true
+  block-drop: true
+  block-damage: true
+  # Block commands while frozen (except the ones listed below)
+  block-commands: true
+  allowed-commands:
+    - msg
+    - r
+    - reply
+    - tell
+    - helpop
+  # Alert staff if a frozen player logs out
+  alert-staff-on-logout: true
+  # Console command run when a frozen player logs out. Leave "" to disable.
+  # Example: "ban %player% Logged out while frozen"
+  logout-command: ""
+  actionbar-reminder: true
+  actionbar-message: "&c&lYou are frozen - do not log out"
+
+speed:
+  max: 10
+
+messages:
+  prefix: "&8[&bAdmin&8] &r"
+  player-not-found: "&cPlayer &e%player% &cnot found."
+  only-players: "&cOnly players can use this."
+  no-others: "&cYou can't use this on other players."
+  gamemode-self: "&aGamemode set to &e%mode%&a."
+  gamemode-other: "&aSet &e%player%&a to &e%mode%&a."
+  vanish-on: "&aVanish enabled. You are hidden."
+  vanish-off: "&eVanish disabled. You are visible."
+  freeze-usage: "&cUsage: /freeze <player>"
+  freeze-bypass: "&cYou can't freeze that player."
+  freeze-on-sender: "&aFroze &e%player%&a."
+  freeze-on-target: "&cYou have been frozen by staff. Do not log out."
+  freeze-off-sender: "&aUnfroze &e%player%&a."
+  freeze-off-target: "&aYou have been unfrozen."
+  freeze-logout-alert: "&c%player% logged out while frozen!"
+  freeze-command-blocked: "&cYou can't use commands while frozen."
+  fly-self: "&aFlight %state%&a."
+  fly-other: "&aFlight %state% &afor &e%player%&a."
+  speed-usage: "&cUsage: /speed <0-10> [player]"
+  speed-invalid: "&cSpeed must be a number from 0 to %max%."
+  speed-self: "&aSpeed set to &e%speed%&a."
+  speed-other: "&aSet &e%player%&a's speed to &e%speed%&a."
+  heal-self: "&aYou have been healed."
+  heal-other: "&aHealed &e%player%&a."
+  feed-self: "&aYour hunger has been restored."
+  feed-other: "&aFed &e%player%&a."
+  god-self: "&aGod mode %state%&a."
+  god-other: "&aGod mode %state% &afor &e%player%&a."
+  invsee-usage: "&cUsage: /invsee <player>"
+  invsee-self: "&cYou can't open your own inventory this way."
+  tphere-usage: "&cUsage: /tphere <player>"
+  tphere-done: "&aTeleported &e%player% &ato you."
+  sc-usage: "&cUsage: /sc <message>"
+  sc-format: "&8[&cStaff&8] &7%player%&8: &f%message%"
+  reload: "&aAdminTools config reloaded."
+  state-on: "&aenabled"
+  state-off: "&cdisabled"
