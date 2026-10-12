@@ -17,7 +17,7 @@ vanish:
   # Keep vanish on after relog / restart
   persist-on-rejoin: true
   # Send a fake leave/join message when you vanish/unvanish
-  fake-messages: false
+  fake-messages: true
   fake-leave-message: "&e%player% left the game"
   fake-join-message: "&e%player% joined the game"
   # Small reminder above the hotbar while vanished
